@@ -1,0 +1,35 @@
+Task 4 – Windows Firewall Configuration Report
+
+
+Current Firewall Profiles Status
+
+| Profile        | Status | Inbound Rules                         | Outbound Rules                        |
+|----------------|--------|---------------------------------------|---------------------------------------|
+| Domain    | ON     | Block (if no rule matches)            | Allow (if no rule matches)            |
+| Private   | ON     | Block (if no rule matches)            | Allow (if no rule matches)            |
+| Public    | ON ✔️ (Active) | Block (if no rule matches)            | Allow (if no rule matches)            |
+
+
+Actions Performed
+
+1. Opened Firewall GUI:
+   - Used `wf.msc` to access Windows Defender Firewall with Advanced Security.
+
+2. Viewed Current Firewall Profiles:
+   - Verified that all profiles are on and correctly blocking unsolicited inbound traffic.
+
+3. Blocked Port 23 (Telnet):
+   - Added a rule to block inbound TCP traffic on port 23 to prevent Telnet-based attacks.
+
+4. Tested Configuration:
+   - Verified rules were applied using the GUI and basic connectivity tests.
+   - Removed the Telnet rule after testing to restore the system to default.
+
+
+
+Summary
+
+This configuration helps:
+- Prevent unauthorized access on unused or risky ports (like 23 – Telnet).
+- Apply policies consistently across all network profiles.
+
